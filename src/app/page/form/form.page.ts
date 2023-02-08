@@ -20,26 +20,26 @@ export class FormPage implements OnInit {
   produto: any = {};
 
   ngOnInit() {
-  this.routeId=
+  this.routeId =
   this.activateRouter.snapshot.params['id'];
 
   if(this.routeId){
     // Se o id do produto for encontrado
     // Ativa o banco de dados
 
-    this.banco.getOneItem(this.routeId).subscribe(caixa => {this.produto = caixa});]
+    // this.banco.getOneItem(this.routeId).subscribe(caixa => {this.produto = caixa});]
 
   }
 
-  Update(form: any){
+  // Update(form: any){
 
-    this.banco.updateItem(form.value, this.routeId);
-    this.router.navigate[''];
-    this.util.tostando("Item Atualizado com sucesso","middle", 2000, "medium");
-
-  }
-  declarations: [FormPage]
+    // this.banco.updateItem(form.value, this.routeId);
+    // this.router.navigate[''];
+    // this.util.tostando("Item Atualizado com sucesso","middle", 2000, "medium");
 
   }
+  // declations: [FormPage]
 
-}
+  }
+
+
