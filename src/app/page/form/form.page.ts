@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { forceUpdate } from 'ionicons/dist/types/stencil-public-runtime';
+import { Produto } from 'src/app/model/produto';
 
 @Component({
   selector: 'app-form',
