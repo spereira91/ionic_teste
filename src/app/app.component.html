@@ -2,5 +2,31 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
+<ion-header>
+  <ion-toolbar>
+    <ion-title routerLink="/home">Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-buttons slot="start">
+<ion-list>
+    <ion-menu-toggle auto-hide="false">
+      <ion-item routerLink="/contato">
+         <ion-icon slot="start" name="call"></ion-icon>
+           <ion-label>
+             Contato
+           </ion-label>   
+          <!-- </ion-buttoons>  -->
+
+      </ion-item>
+      <ion-item routerLink="/form">
+        <ion-icon slot="start" name="checkmark-circle"></ion-icon>
+          <ion-label>
+            Formulário de compra
+          </ion-label>      
+     </ion-item>
+
+    </ion-menu-toggle>
+
+  </ion-list>
 
 
