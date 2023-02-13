@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
- import { Produto } from '../model/produto';
+import { Produto } from '../model/produto';
 import { identity } from 'rxjs';
-@Injectable({
+
+@Injectable ({ 
   providedIn: 'root'
 })
+
 export class DatabaseService {
 
   constructor(private http: HttpClient) { }
