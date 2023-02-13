@@ -2,7 +2,7 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title routerLink="/home">HOME</ion-title>
   </ion-toolbar>
@@ -15,9 +15,9 @@
            <ion-label>
              Contato
            </ion-label>   
-          <!-- </ion-buttoons>  -->
+          </ion-buttoons>  -->
 
-      </ion-item>
+      <!-- </ion-item>
       <ion-item routerLink="/form">
         <ion-icon slot="start" name="checkmark-circle"></ion-icon>
           <ion-label>
@@ -27,6 +27,23 @@
 
     </ion-menu-toggle>
 
-  </ion-list>
+  </ion-list> -->
 
+<ion-toolbar>
+  <nav class="navbar">
+    <a class="navbar-brand" href="home">HOME</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="contato">Contato <span class="sr-only"></span></a>
+        <a class="nav-item nav-link" href="form">formulário de Compras</a>
+        <!-- <a class="nav-item nav-link" href="#">Preços</a>
+        <a class="nav-item nav-link disabled" href="#">Desativado</a> -->
+      </div>
+    </div>
+  </nav>
+</ion-toolbar>
 
+ 
