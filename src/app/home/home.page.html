@@ -49,8 +49,46 @@
 
 <ion-content [fullscreen]="true">
 
-<ion-img src="/assets/lista.jpg">
+<ion-img src="/assets/lista.jpg"></ion-img>
 
-</ion-img>
+<ion-list>
 
+  <ion-item-sliding *ngFor = "let produto of listaProdutos">
+
+    <ion-item (click)="actionMetod(produto)">
+      <!--Bolinha Branca - opção radio-->
+      <ion-icon name="radio-button-off" *ngIf="!produto.status"></ion-icon>
+
+      <ion-label *ngIf="!produto.status">
+
+        <strong>Produto: </strong>
+
+        {{produto.produto}}
+
+      </ion-label>
+
+      <ion-label *ngIf="!produto.status">
+
+        <strong>Quantidade: </strong>
+
+        {{produto.produto}}
+
+      </ion-label>
+      </ion-item>
+
+<ion-toolbar color="dark" mode="ios">
+
+  <ion-item-option color="blue">
+
+    <ion-icon name="trash-outline"></ion-icon>
+
+  </ion-item-option>
+
+  <ion-item-option color="sucess" [routerLink]="['/form, produto.id']"></ion-item-option>
+
+  <ion-icon name="refresh-outline"></ion-icon>
+
+</ion-toolbar>
+</ion-item-sliding>
+</ion-list>
 </ion-content>
