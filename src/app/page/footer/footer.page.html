@@ -11,13 +11,37 @@
 
       <ion-fab-button color="dark" routerLink="/footer">
 
-        <ion-icon name="home-outline">
+        <ion-icon name="home-outline" color="danger">
           
         </ion-icon>
 
       </ion-fab-button>
 
     </ion-fab>
+
+    <ion-tab-bar slot="bottom" color="medium" mode="ios">
+
+      <ion-tab-button class="coments">
+
+        <ion-icon name="add-circle-outline" color="dark">
+
+          <ion-label>Cadastrar</ion-label>
+
+          <div class="division"></div>
+
+        </ion-icon>
+
+      </ion-tab-button>
+
+      <ion-tab-button tab="contato" class="notifs">
+
+        <ion-icon name="phone-portrait-outline" color="dark"></ion-icon>
+
+        <ion-label color="dark">Contato</ion-label>
+
+      </ion-tab-button>
+
+    </ion-tab-bar>
 
   </ion-tabs>
 </ion-content>
