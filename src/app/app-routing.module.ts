@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'footer',
     pathMatch: 'full'
   },
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./page/home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'form',
+    path: 'form/:id',
     loadChildren: () => import('./page/form/form.module').then( m => m.FormPageModule)
   },
   {
@@ -30,7 +30,8 @@ const routes: Routes = [
   {
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
-  },  {
+  },
+  {
     path: 'footer',
     loadChildren: () => import('./page/footer/footer.module').then( m => m.FooterPageModule)
   },

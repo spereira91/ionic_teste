@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from 'src/app/model/produto';
+import { UtilityService } from 'src/app/dataBase/Utility.service';
+import { DatabaseService } from 'src/app/dataBase/database.service'
 
 @Component({
   selector: 'app-form',
@@ -13,6 +15,8 @@ export class FormPage implements OnInit {
     
     private activateRouter: ActivatedRoute,
     private router: Router,
+    private banco: DatabaseService,
+    private util: UtilityService
 
     ) { 
   }
@@ -27,19 +31,17 @@ export class FormPage implements OnInit {
     // Se o id do produto for encontrado
     // Ativa o banco de dados
 
-    // this.banco.getOneItem(this.routeId).subscribe(caixa => {this.produto = caixa});]
+     this.banco.getOneItem(this.routeId).subscribe(caixa => {this.produto = caixa})}
 
   }
 
-  // Update(form: any){
+   updateItem(form: any){
 
-    // this.banco.updateItem(form.value, this.routeId);
-    // this.router.navigate[''];
-    // this.util.tostando("Item Atualizado com sucesso","middle", 2000, "medium");
-
-  }
-  // declations: [FormPage]
+     this.banco.UpdateItem(this.routeId, form);
+     this.router.navigate
+     this.util.tostando("Item Atualizado com sucesso","middle", 2000, "medium");
 
   }
+ 
 
-
+  }

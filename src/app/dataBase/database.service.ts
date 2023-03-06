@@ -39,15 +39,17 @@ delItem(id:number){
 
 // MÉTODO DE ALTERAÇÃO DE STATUS
 statusItem(item: Produto){
-  return this.http.put(this.API + item.id,JSON.stringify(item),
-  this.HttpOptions).subscribe();
+  return this.http.put(this.API + item.id,JSON.stringify(item), this.HttpOptions).subscribe()
 }
 
 // MÉTODOS PARA ATUALIZAR OS DADOS
 UpdateItem(id: any, item: Produto){
-  return this.http.put(this.API + id, 
-  JSON.stringify(item),
-  this.HttpOptions).subscribe()
+  return this.http.put(this.API + id, JSON.stringify(item), this.HttpOptions).subscribe()
+}
+
+// MÉTODO PARA CADASTRAR UM ITEM
+posItem(dados: any){
+  return this.http.post(this.API, JSON.stringify(dados), this.HttpOptions).subscribe()
 }
 
 }
