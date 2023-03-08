@@ -10,7 +10,10 @@ import { UtilityService } from '../dataBase/Utility.service';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
 export class HomePage implements OnInit {
+
+
 
 constructor(
   //Nosso objeto para os serviços do banco de dados
